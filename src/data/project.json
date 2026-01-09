@@ -1,0 +1,34 @@
+{
+  "name": "Corporate Website",
+  "client": "ACME Corp",
+  "status": "in-review",
+  "statuses": {
+    "in-dev": "В разработке",
+    "in-review": "На проверке",
+    "approved": "Утверждено"
+  },
+  "updated": "2026-01-09",
+  "pages": [
+    {
+      "title": "Главная",
+      "path": "/index.html",
+      "status": "approved"
+    },
+    {
+      "title": "О компании",
+      "path": "/about.html",
+      "status": "in-review"
+    },
+    {
+      "title": "Контакты",
+      "path": "/contacts.html",
+      "status": "in-dev"
+    },
+    {
+      "title": "Админка",
+      "path": "/admin/index.html",
+      "status": "in-dev",
+      "private": true
+    }
+  ]
+}

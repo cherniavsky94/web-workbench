@@ -1,0 +1,100 @@
+/* =========================
+   COLORS
+   ========================= */
+
+$color-black: #111111;
+$color-white: #ffffff;
+
+$color-gray-50: #f9fafb;
+$color-gray-100: #f3f4f6;
+$color-gray-200: #e5e7eb;
+$color-gray-300: #d1d5db;
+$color-gray-400: #9ca3af;
+$color-gray-500: #6b7280;
+$color-gray-600: #4b5563;
+$color-gray-700: #374151;
+$color-gray-800: #1f2937;
+$color-gray-900: #111827;
+
+$color-primary: #4f46e5;
+$color-secondary: #06b6d4;
+$color-success: #22c55e;
+$color-warning: #f59e0b;
+$color-danger: #ef4444;
+
+/* =========================
+   TYPOGRAPHY
+   ========================= */
+
+$font-family-base:
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  sans-serif;
+
+$font-family-mono:
+  ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+$font-size-base: 16px;
+$line-height-base: 1.5;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+/* =========================
+   LAYOUT
+   ========================= */
+
+$container-max-width: 1200px;
+$container-padding: 16px;
+
+/* =========================
+   SPACING (8pt system)
+   ========================= */
+
+$space-xxs: 4px;
+$space-xs: 8px;
+$space-sm: 12px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-xxl: 48px;
+
+/* =========================
+   BORDER / RADIUS
+   ========================= */
+
+$border-radius-xs: 2px;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+
+$border-color-base: $color-gray-200;
+
+/* =========================
+   Z-INDEX SCALE
+   ========================= */
+
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-header: 300;
+$z-modal: 1000;
+$z-toast: 1100;
+
+/* =========================
+   BREAKPOINTS
+   ========================= */
+
+$breakpoint-xs: 360px;
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;

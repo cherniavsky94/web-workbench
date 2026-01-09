@@ -1,0 +1,40 @@
+{
+  "name": "Chernivaskyi Web",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "clean": "rm -rf dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.23",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "fast-glob": "^3.3.3",
+    "image-minimizer-webpack-plugin": "^4.1.4",
+    "mini-css-extract-plugin": "^2.9.4",
+    "postcss": "^8.5.6",
+    "postcss-loader": "^8.2.0",
+    "posthtml": "^0.16.7",
+    "posthtml-beautify": "^0.7.0",
+    "posthtml-component": "^2.2.2",
+    "posthtml-expressions": "^1.11.4",
+    "prettier": "^3.7.4",
+    "sass": "^1.97.2",
+    "sass-loader": "^16.0.6",
+    "sharp": "^0.34.5",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "@splidejs/splide": "^4.1.4",
+    "modern-normalize": "^3.0.1"
+  }
+}

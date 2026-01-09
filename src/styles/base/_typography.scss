@@ -1,0 +1,120 @@
+@use '../core' as *;
+
+html {
+  font-size: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  font-weight: $font-weight-regular;
+  color: $color-gray-900;
+  background-color: $color-white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   HEADINGS
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 $space-md;
+  font-weight: $font-weight-semibold;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 1.875rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* =========================
+   TEXT ELEMENTS
+   ========================= */
+
+p {
+  margin: 0 0 $space-md;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+strong {
+  font-weight: $font-weight-semibold;
+}
+
+em {
+  font-style: italic;
+}
+
+/* =========================
+   LINKS
+   ========================= */
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* =========================
+   LISTS
+   ========================= */
+
+ul,
+ol {
+  margin: 0 0 $space-md;
+  padding-left: $space-lg;
+}
+
+li {
+  margin-bottom: $space-xs;
+}
+
+/* =========================
+   CODE
+   ========================= */
+
+code,
+pre {
+  font-family: $font-family-mono;
+  font-size: 0.875em;
+}
+
+pre {
+  padding: $space-md;
+  background-color: $color-gray-100;
+  border-radius: $border-radius-sm;
+  overflow-x: auto;
+}

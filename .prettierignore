@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+.vite
+.DS_Store
+coverage
+package-lock.json
+yarn.lock
+.pnpm-store
+pnpm-lock.yaml

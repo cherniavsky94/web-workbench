@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Dashboard</title>
+
+    <style>
+      :root {
+        --bg: #0f1115;
+        --panel: #151822;
+        --panel-soft: #1b2030;
+        --text: #e6e8ee;
+        --muted: #9aa1b2;
+
+        --dev: #6b7280;
+        --review: #f59e0b;
+        --approved: #22c55e;
+        --accent: #6366f1;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family:
+          Inter,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+        line-height: 1.5;
+      }
+
+      .container {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+
+      header {
+        margin-bottom: 40px;
+      }
+
+      .brand {
+        font-size: 13px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      h1 {
+        margin: 8px 0 16px;
+        font-size: 36px;
+        font-weight: 600;
+      }
+
+      .meta {
+        display: flex;
+        gap: 32px;
+        flex-wrap: wrap;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .progress {
+        margin-top: 32px;
+        background: var(--panel);
+        border-radius: 12px;
+        padding: 20px;
+      }
+
+      .progress-bar {
+        height: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        overflow: hidden;
+        margin-top: 8px;
+      }
+
+      .progress-fill {
+        height: 100%;
+        width: 0%;
+        background: linear-gradient(90deg, var(--accent), #22c55e);
+        border-radius: 6px;
+        transition: width 0.6s ease;
+      }
+
+      section {
+        margin-top: 32px;
+        background: var(--panel);
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      .pages {
+        display: grid;
+        gap: 12px;
+      }
+
+      .page {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.03);
+      }
+
+      .page a {
+        color: var(--text);
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      .page small {
+        display: block;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .status {
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .page[data-status='in-dev'] .status {
+        color: var(--dev);
+      }
+
+      .page[data-status='in-review'] .status {
+        color: var(--review);
+      }
+
+      .page[data-status='approved'] .status {
+        color: var(--approved);
+      }
+
+      /* Documentation block */
+
+      .docs {
+        margin-top: 40px;
+        background: linear-gradient(135deg, var(--panel-soft), rgba(99, 102, 241, 0.12));
+        border-radius: 14px;
+        padding: 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .docs h2 {
+        margin: 0 0 6px;
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .docs p {
+        margin: 0;
+        font-size: 14px;
+        color: var(--muted);
+        max-width: 520px;
+      }
+
+      .docs a {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px 18px;
+        border-radius: 10px;
+        background: var(--accent);
+        color: #fff;
+        font-size: 14px;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition:
+          transform 0.15s ease,
+          opacity 0.15s ease;
+      }
+
+      .docs a:hover {
+        transform: translateY(-1px);
+        opacity: 0.9;
+      }
+
+      footer {
+        margin-top: 48px;
+        text-align: center;
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      footer span {
+        color: var(--accent);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <div class="brand">Web Workbench</div>
+        <h1>Corporate Website</h1>
+
+        <div class="meta">
+          <div>Клиент: ACME Corp</div>
+          <div>Обновлено: 09.01.2026</div>
+        </div>
+
+        <div class="progress">
+          <div>
+            Прогресс проекта:
+            <strong><span id="progress-value">0</span>%</strong>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progress-bar"></div>
+          </div>
+        </div>
+      </header>
+
+      <section>
+        <div class="pages">
+          <div class="page" data-status="approved">
+            <div>
+              <a href="/index.html">Главная</a>
+              <small>/index.html</small>
+            </div>
+            <div class="status">Утверждено</div>
+          </div>
+
+          <div class="page" data-status="in-review">
+            <div>
+              <a href="/about.html">О компании</a>
+              <small>/about.html</small>
+            </div>
+            <div class="status">На проверке</div>
+          </div>
+
+          <div class="page" data-status="in-dev">
+            <div>
+              <a href="/contacts.html">Контакты</a>
+              <small>/contacts.html</small>
+            </div>
+            <div class="status">В разработке</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Documentation -->
+
+      <div class="docs">
+        <div>
+          <h2>Документация проекта</h2>
+          <p>Структура страниц, статусы, правила работы и технические договорённости по проекту.</p>
+        </div>
+
+        <!-- Поменяй href на нужный -->
+        <a href="/docs/index.html" target="_blank" rel="noopener"> Открыть документацию → </a>
+      </div>
+
+      <footer>Powered by <span>Web Workbench</span> · Transparent frontend workflow</footer>
+    </div>
+
+    <script>
+      ;(() => {
+        const STATUS_WEIGHT = {
+          approved: 100,
+          'in-review': 50,
+          'in-dev': 0,
+        }
+
+        const pages = document.querySelectorAll('.page')
+        if (!pages.length) return
+
+        let total = 0
+
+        pages.forEach((page) => {
+          total += STATUS_WEIGHT[page.dataset.status] ?? 0
+        })
+
+        const progress = Math.round(total / pages.length)
+
+        document.getElementById('progress-value').textContent = progress
+        document.getElementById('progress-bar').style.width = `${progress}%`
+      })()
+    </script>
+  </body>
+</html>

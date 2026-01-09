@@ -1,0 +1,7 @@
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - cwebp-bin
+  - esbuild
+  - mozjpeg
+  - pngquant-bin
+  - sharp
